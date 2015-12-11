@@ -1274,11 +1274,11 @@ func (i R_386) GoString() string { return stringName(uint32(i), r386Strings, tru
 type R_MIPS int
 
 const (
-	R_MIPS_NONE          R_MIPS = 0
-	R_MIPS_16            R_MIPS = 1
-	R_MIPS_32            R_MIPS = 2
-	R_MIPS_REL32         R_MIPS = 3
-	R_MIPS_26            R_MIPS = 4
+	R_MIPS_NONE          R_MIPS = 0  /* No reloc */
+	R_MIPS_16            R_MIPS = 1  /* Direct 16 bit */
+	R_MIPS_32            R_MIPS = 2  /* Direct 32 bit */
+	R_MIPS_REL32         R_MIPS = 3  /* PC relative 32 bit*/
+	R_MIPS_26            R_MIPS = 4  /* Direct 26 bit shifted */
 	R_MIPS_HI16          R_MIPS = 5  /* high 16 bits of symbol value */
 	R_MIPS_LO16          R_MIPS = 6  /* low 16 bits of symbol value */
 	R_MIPS_GPREL16       R_MIPS = 7  /* GP-relative reference  */
@@ -1286,7 +1286,7 @@ const (
 	R_MIPS_GOT16         R_MIPS = 9  /* Reference to global offset table */
 	R_MIPS_PC16          R_MIPS = 10 /* 16 bit PC relative reference */
 	R_MIPS_CALL16        R_MIPS = 11 /* 16 bit call thru glbl offset tbl */
-	R_MIPS_GPREL32       R_MIPS = 12
+	R_MIPS_GPREL32       R_MIPS = 12 /* GP relative 32 bit */
 	R_MIPS_SHIFT5        R_MIPS = 16
 	R_MIPS_SHIFT6        R_MIPS = 17
 	R_MIPS_64            R_MIPS = 18
